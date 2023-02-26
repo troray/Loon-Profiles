@@ -40,7 +40,7 @@ interface-mode = auto
 switch-node-after-failure-times = 3
 
 # > 资源解析器
-# resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/sub-store-parser.loon.min.js
+resource-parser = https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/backend/dist/sub-store-parser.loon.min.js
 
 [Host]
 *.taobao.com = server:223.5.5.5
@@ -67,10 +67,10 @@ dl.l.google.com = server:119.29.29.29
 [Proxy]
 
 [Remote Proxy]
-卡车极速 = https://kcssr.me/auth/register?code=jUqG
+机场订阅 = https://www.sdkfeojf.com
 
 [Proxy Group]
-ALL-SUB = url-test,韩国,日本,香港,台湾,美国,新加坡,其他地区,url = http://www.gstatic.com/generate_204,interval = 60,tolerance = 1500,img-url = https://raw.githubusercontent.com/alpha87/Loon-icon/master/Color/SWCloud.png
+FINAL = url-test,韩国,日本,香港,台湾,美国,新加坡,其他地区,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1500,img-url = https://raw.githubusercontent.com/alpha87/Loon-icon/master/Color/SWCloud.png
 香港 = url-test,HK_Filter,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1000,img-url = https://raw.githubusercontent.com/alpha87/Loon-icon/master/Color/HK.png
 台湾 = url-test,TW_Filter,url = http://www.gstatic.com/generate_204,interval = 600,tolerance = 1500,img-url = https://raw.githubusercontent.com/alpha87/Loon-icon/master/Color/TW.png
 美国 = url-test,US_Filter,url = http://www.gstatic.com/generate_204,interval = 300,tolerance = 1000,img-url = https://raw.githubusercontent.com/alpha87/Loon-icon/master/Color/US.png
@@ -93,10 +93,10 @@ RS_Filter = NameKeyword, FilterKey = "俄罗斯"
 
 [Rule]
 GEOIP,cn,DIRECT
-FINAL,ALL-SUB
+FINAL,FINAL
 
 [Remote Rule]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=ALL-SUB, tag=Global, parser-enable=true, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=FINAL, tag=Global, parser-enable=true, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Bilibili.list, policy=DIRECT, tag=哔哩哔哩, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/XiaoHongShu/XiaoHongShu.list, policy=DIRECT, tag=小红书, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Weibo/Weibo.list, policy=DIRECT, tag=微博, enabled=true
@@ -111,7 +111,7 @@ http-response ^https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) scri
 http-response ^https?:\/\/backend\.getdrafts\.com\/api\/v1\/verification\/verify_receipt script-path=drafts.js, requires-body=true, timeout=10, tag=DraftsVIP
 
 [Plugin]
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, policy=ALL-SUB, tag=重定向, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin, policy=FINAL, tag=重定向, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Advertising/Advertising.plugin, policy=REJECT, tag=Advertising, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AdvertisingScript/AdvertisingScript.plugin, policy=REJECT, tag=AdvertisingScript, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/AllInOne/AllInOne.plugin, policy=REJECT, tag=ALL IN ONE, enabled=true
